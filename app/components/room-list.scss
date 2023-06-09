@@ -1,0 +1,47 @@
+.room-list-space {
+  min-width: 45rem;
+  min-height: max(50%, 500px);
+  overflow: hidden;
+
+  .top-bar {
+    background-color: var(--color-green);
+    padding: 0.5em 1.25em;
+  }
+  
+  .room-list {
+    padding: 1em;
+
+    .room-list-item {
+      height: 2.8em;
+      outline: 1px solid var(--color-green);
+      background-color: var(--color-grey);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+      }
+
+      .info-space {
+        width: 100%;
+        padding: 0.5em 2em 0.5em 1.2em;
+        justify-content: space-between;
+
+        img {
+          margin-left: 0.5em;
+        }
+      }
+
+      .enter-button {
+        background-color: var(--color-green);
+        gap: 1em;
+        align-items: center;
+        padding: 0.5em 1.2em;
+        cursor: pointer;
+      }
+    }
+  }
+}
