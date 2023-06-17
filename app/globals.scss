@@ -32,8 +32,7 @@ h1 { font-size: 2em; }
 }
 
 html,
-body,
-main {
+body {
   max-width: 100vw;
   overflow-x: hidden;
 
@@ -45,16 +44,12 @@ main {
   //font-size: 16px;
 }
 
-main {
+body {
   color: var(--color-foreground);
   background-image: var(--background-gradient);
   background-size: 400%;
   background-position: left;
   animation: background-flow 10s infinite alternate;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 @keyframes background-flow {
@@ -69,6 +64,11 @@ main {
 .block {
   background: var(--color-black);
   border-radius: var(--border-radius);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-foreground);
 }
 
 

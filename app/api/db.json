@@ -1,0 +1,7 @@
+{
+  "rooms": [
+    { "id": 1, "name": "My Private Room", "headCount": 3 },
+    { "id": 2, "name": "Hello Friends", "headCount": 13 },
+    { "id": 3, "name": "Test Room Here", "headCount": 8 }
+  ]
+}
