@@ -14,16 +14,29 @@
   );
 
   --border-radius: 25px;
+
+  --fs-200: clamp(0.94rem, calc(0.89rem + 0.21vw), 1.06rem);
+  --fs-300: clamp(1.13rem, calc(0.99rem + 0.65vw), 1.50rem);
+  --fs-400: clamp(1.35rem, calc(1.08rem + 1.34vw), 2.12rem);
+  --fs-500: clamp(1.62rem, calc(1.14rem + 2.40vw), 3.00rem);
+  --fs-600: clamp(1.94rem, calc(1.14rem + 3.99vw), 4.24rem);
+  --fs-700: clamp(2.33rem, calc(1.06rem + 6.37vw), 6.00rem);
+  --fs-800: clamp(2.80rem, calc(0.82rem + 9.88vw), 8.48rem);
 }
 
 h3, h4, h5 {
   font-weight: 500;
 }
 
-h4 { font-size: 1.25em; }
-h3 { font-size: 1.5em; }
-h2 { font-size: 1.75em; }
-h1 { font-size: 2em; }
+// h4 { font-size: 1.25em; }
+// h3 { font-size: 1.5em; }
+// h2 { font-size: 1.75em; }
+// h1 { font-size: 2em; }
+
+h4 { font-size: var(--fs-200) }
+h3 { font-size: var(--fs-300) }
+h2 { font-size: var(--fs-400) }
+h1 { font-size: var(--fs-500) }
 
 * {
   box-sizing: border-box;
@@ -69,6 +82,18 @@ body {
 a {
   text-decoration: none;
   color: var(--color-foreground);
+}
+
+.wrapper {
+  width: min(100% - 3rem, 60em);
+  height: 100%;
+  padding-top: 1em;
+  margin-inline: auto;
+  position: relative;
+}
+
+.wrapper > * {
+  margin: auto;
 }
 
 

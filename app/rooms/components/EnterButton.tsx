@@ -8,7 +8,13 @@ interface Props {
 
 const EnterButton = ({ roomId }: Props) => {
   return (
-    <Link href={`/${roomId}`}>
+    <Link
+      href={{
+        pathname: `/rooms/form`,
+        query: {
+          roomId: roomId,
+        },
+      }}>
       <div className="enter-button">
         <h3>Enter</h3>
         <Image src={ArrowRight} alt="" />

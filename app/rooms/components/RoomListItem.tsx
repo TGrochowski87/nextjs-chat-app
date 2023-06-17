@@ -26,7 +26,7 @@ const RoomListItem = async ({ id, name }: Props) => {
     <div className="room-list-item">
       <div className="info-space">
         <h3>{name}</h3>
-        <div>
+        <div className="head-count">
           <h3>{headCount}</h3>
           <Image src={Person} alt="People in room" width={24} height={24} />
         </div>

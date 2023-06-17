@@ -1,11 +1,7 @@
-import RoomList from "./components/RoomList";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <main>
-      {/* @ts-expect-error Server Component */}
-      <RoomList />
-    </main>
-  );
-}
+const Home = () => {
+  redirect("/rooms");
+};
 
+export default Home;
