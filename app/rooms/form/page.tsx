@@ -1,8 +1,12 @@
 "use client";
 
-import { Button, Input } from "@mui/joy";
+import { CssVarsProvider, Input } from "@mui/joy";
+import TitledBlock from "common/components/TitledBlock";
+import { Route } from "next";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
+import BrokenFrameButton from "../../common/components/BrokenFrameButton";
+import "./form.scss";
 
 const NameForm = () => {
   const searchParams = useSearchParams();
@@ -22,20 +26,25 @@ const NameForm = () => {
   }, []);
 
   return (
-    <form
-      onSubmit={() => {
-        router.push(`/rooms/${roomId}`);
-      }}>
-      <Input
-        placeholder="Type in here..."
-        required
-        value={input}
-        onChange={event => {
-          setInput(event.target.value);
-        }}
-      />
-      <Button type="submit" />
-    </form>
+    <CssVarsProvider defaultMode="dark">
+      <TitledBlock className="vertical-center form-space" title="Enter your name">
+        <form
+          onSubmit={(event: FormEvent<HTMLFormElement>) => {
+            event.preventDefault();
+            router.push(`/rooms/${roomId}` as Route);
+          }}>
+          <Input
+            placeholder="Type in here..."
+            required
+            value={input}
+            onChange={event => {
+              setInput(event.target.value);
+            }}
+          />
+          <BrokenFrameButton>Submit</BrokenFrameButton>
+        </form>
+      </TitledBlock>
+    </CssVarsProvider>
   );
 };
 

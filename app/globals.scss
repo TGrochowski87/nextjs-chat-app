@@ -74,14 +74,16 @@ body {
   }
 }
 
-.block {
-  background: var(--color-black);
-  border-radius: var(--border-radius);
-}
-
 a {
   text-decoration: none;
   color: var(--color-foreground);
+}
+
+// =================== GLOBAL CLASSES ===================
+.block {
+  background: var(--color-black);
+  border-radius: var(--border-radius);
+  outline: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 .wrapper {
@@ -93,6 +95,12 @@ a {
 }
 
 .wrapper > * {
+  margin: auto;
+}
+
+.vertical-center {
+  position: absolute;
+  inset: 0;
   margin: auto;
 }
 
