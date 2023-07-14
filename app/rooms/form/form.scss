@@ -1,0 +1,13 @@
+.form-space {
+  width: min(100%, 30em);
+  height: fit-content;
+
+  form {
+    padding-inline: 2em;
+
+    button {
+      margin-top: 3em;
+      margin-left: auto;
+    }
+  }
+}
